@@ -20,11 +20,11 @@ The code is written in Matlab and was tested on Matlab 2018b. For reference, the
 * `heat_freq.m`: solves the heat equation in the Laplace domain, returns solution at given frequency
 * `heat_freq_moved.m`: recreated solution in frequency domain using exterior points 
 * `heat_freq_scat.m`: calculate scattered fields in the frequency domain
-* `helm_moved.m`: solution for helmholtz equation w/ moved sources
+* `helm_moved.m`: solution for helmholtz equation with moved sources
 * `Kapur_scat.m`<sup>1</sup>: calculates density data in freq domain for scattering problem using Kapur-Rohklin correction to handle periodic kernel with logarithmic singularity
-* `kite.m`<sup>2</sup>: kite geometry for inclusion (see Colton and Kress, _Inverse Acoustic and Electromagnetic Scattering Theory_, Springer, third edition, section 3.5)
+* `kite.m`: kite geometry for inclusion (see Colton and Kress, _Inverse Acoustic and Electromagnetic Scattering Theory_, Springer, third edition, section 3.5)
 * `move_src.m`: maps where interior sources move for exterior cloaking
-* `nap.m`<sup>2</sup>: approximates L2 norm in space
+* `nap.m`<sup>2</sup>: approximates L<sup>2</sup> norm in space
 * `phys_dev.m`: calculates the size of the "physical" devices
 * `point_diff.m`<sup>2</sup>: difference between two sets of points 
 * `redblue.m`<sup>1</sup>: Colormap from https://www.mathworks.com/matlabcentral/fileexchange/25536-red-blue-colormap
@@ -34,7 +34,44 @@ The code is written in Matlab and was tested on Matlab 2018b. For reference, the
 * `thickLines.m`<sup>1</sup>: plotting settings
 
 
-[1] code is not originally from TD/FGV
+[1] code is not originally from TD/FGV and is provided here for reference only.
 
-[2] code is from TD/FGV "Active Thermal Cloaking and Mimicking"
+[2] code is from "Active Thermal Cloaking and Mimicking" by the same authors. See https://github.com/fguevaravas/atc.
 
+## Funding
+This project was partially funded by the National Science Foundation
+Grant DMS-2008610.  
+
+## License
+Unless noted otherwise, the code is released under the following license (see also `LICENSE` file)
+```
+BSD 3-Clause License
+
+Copyright (c) 2022, Trent DeGiovanni and Fernando Guevara Vasquez
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
