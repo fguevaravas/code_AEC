@@ -1,5 +1,5 @@
 %Originally from: Alex Barnett ``Boundary integral equations for BVPs, and their
-%high-order Nystr®om quadratures: a tutorial" https://math.dartmouth.edu/~fastdirect/notes/quadr.pdf
+%high-order Nystr√∂m quadratures: a tutorial" https://math.dartmouth.edu/~fastdirect/notes/quadr.pdf
 %Modifed by TD for geometry we use.
 
 %%% Kapur-Rokhlin scheme for solving exterior dirichlet problem 
