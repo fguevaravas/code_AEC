@@ -1,0 +1,1 @@
+%Approximate L2 norm of temperature%%Input:%   U: temperature field%   N: Number of grid points N1*N2%Output:%   x: approimxate L2 norm of datafunction[x] = nap(U,N)     x = sqrt(sum(sum(U.^2))/N);end %function
