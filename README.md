@@ -8,7 +8,7 @@ The code is written in Matlab and was tested on Matlab 2018b. For reference, the
 ## List of functions
 * `bounds_freq.m`: Finds the monopole/dipole errors & bounds for moving one source as a function of frequency 
 * `bounds_space.m`: Finds the monopole/dipole errors & bounds for moving one source as a function of frequency
-* `CFIEnystKR.m`<sup>1</sup>: Kapur-Rokhlin scheme for solving exterior Dirichlet problem 
+* `CFIEnystKR.m`<sup>1</sup>: Kapur-Rokhlin scheme for solving exterior Dirichlet problem,  see https://math.dartmouth.edu/~fastdirect/notes/quadr.pdf
 * `circ.m`: circle geometry (normals, center points, distance between boundary segments)
 * `distmat.m`: distance matrix 
 * `dlp.m`: double layer potential for the 2d Helmholtz equation
@@ -21,8 +21,8 @@ The code is written in Matlab and was tested on Matlab 2018b. For reference, the
 * `heat_freq_moved.m`: recreated solution in frequency domain using exterior points 
 * `heat_freq_scat.m`: calculate scattered fields in the frequency domain
 * `helm_moved.m`: solution for helmholtz equation with moved sources
-* `Kapur_scat.m`<sup>1</sup>: calculates density data in freq domain for scattering problem using Kapur-Rohklin correction to handle periodic kernel with logarithmic singularity
-* `kite.m`: kite geometry for inclusion (see Colton and Kress, _Inverse Acoustic and Electromagnetic Scattering Theory_, Springer, third edition, section 3.5)
+* `Kapur_scat.m`<sup>1</sup>: calculates density data in freq domain for scattering problem using Kapur-Rohklin correction to handle periodic kernel with logarithmic singularity, see https://math.dartmouth.edu/~fastdirect/notes/quadr.pdf
+* `kite.m`<sup>2</sup>: kite geometry for inclusion (see Colton and Kress, _Inverse Acoustic and Electromagnetic Scattering Theory_, Springer, third edition, section 3.5)
 * `move_src.m`: maps where interior sources move for exterior cloaking
 * `nap.m`<sup>2</sup>: approximates L<sup>2</sup> norm in space
 * `phys_dev.m`: calculates the size of the "physical" devices
@@ -36,7 +36,7 @@ The code is written in Matlab and was tested on Matlab 2018b. For reference, the
 
 [1] code is not originally from TD/FGV and is provided here for reference only.
 
-[2] code is from "Active Thermal Cloaking and Mimicking" by the same authors. See https://github.com/fguevaravas/atc.
+[2] code is based on that from "Active Thermal Cloaking and Mimicking" by the same authors. See https://github.com/fguevaravas/atc.
 
 ## Funding
 This project was partially funded by the National Science Foundation
