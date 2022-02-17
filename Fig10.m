@@ -95,30 +95,34 @@ thickLines;
 cmax = max(max(field));
 cmin = -cmax;
 
+ncont =35;
+eps = cmax/50;
+levs = [-2e300,linspace(cmin/15,-eps,ncont/2),linspace(eps,cmax,ncont/2),cmax*1.01];
+
 figure(1); clf; 
 hold on;
-[~,h]=contourf(X1,X2,field+U_scat,[-2e300,linspace(cmin,cmax,22)]);
+[~,h]=contourf(X1,X2,field+U_scat,levs);
 set(h,'edgecolor','none');
 h= patch(geo_k.ctr(:,1),geo_k.ctr(:,2),'k'); set(h, 'edgecolor', 'none')
 axis square;
 axis tight;
 axis xy;
 axis off;
-colorbar;
+%colorbar;
 colormap(redblue)
 caxis([cmin,cmax]);
 hold off;
 
 figure(2); clf; 
 hold on;
-[~,h] = contourf(X1,X2,(field-U_rec+U_scat-U_scat_cl),[-2e300,linspace(cmin,cmax,22)]);
+[~,h] = contourf(X1,X2,(field-U_rec+U_scat-U_scat_cl),levs);
 set(h,'edgecolor','none');
 h= patch(geo_k.ctr(:,1),geo_k.ctr(:,2),'k'); set(h, 'edgecolor', 'none')
 axis square;
 axis tight;
 axis xy;
 axis off;
-colorbar;
+%colorbar;
 caxis([cmin,cmax]);
 colormap(redblue)
 viscircles(new_src_locs,rads, 'Color', 'k')
@@ -126,117 +130,17 @@ hold off;
 
 figure(3); clf; 
 hold on;
-[~,h]=contourf(X1,X2,(field),[-2e300,linspace(cmin,cmax,22)]);
+[~,h]=contourf(X1,X2,(field),levs);
 set(h,'edgecolor','none');
 axis square;
 axis tight;
 axis xy;
 axis off;
-colorbar;
+%colorbar;
 colormap(redblue)
 caxis([cmin,cmax]);
 hold off;
-% 
-% %time 2
-% new_m= 2^9/2; %number of time steps
-% t_new = dt*new_m;
-% U_rec = reshape(ft(:,new_m,:),size(X1));
-% U_scat_cl = reshape(fscat_cl(:,new_m,:),size(X1));
-% U_scat = reshape(fscat(:,new_m,:),size(X1));
-% field = temp(X1,X2,t_new);
-% figure(4); clf; 
-% hold on;
-% [~,h]=contourf(X1,X2,field+U_scat,[-2e300,linspace(cmin,cmax,22)]);
-% set(h,'edgecolor','none');
-% h= patch(geo_k.ctr(:,1),geo_k.ctr(:,2),'k'); set(h, 'edgecolor', 'none')
-% axis square;
-% axis tight;
-% axis xy;
-% axis off;
-% colorbar;
-% colormap(redblue)
-% caxis([cmin,cmax]);
-% hold off;
-% 
-% figure(5); clf; 
-% hold on;
-% [~,h]=contourf(X1,X2,(field-U_rec+U_scat-U_scat_cl),[-2e300,linspace(cmin,cmax,22)]);
-% set(h,'edgecolor','none');
-% h= patch(geo_k.ctr(:,1),geo_k.ctr(:,2),'k'); set(h, 'edgecolor', 'none')
-% axis square;
-% axis tight;
-% axis xy;
-% axis off;
-% colorbar;
-% caxis([cmin,cmax]);
-% colormap(redblue)
-% viscircles(new_src_locs,rads, 'Color', 'k')
-% hold off;
-% 
-% figure(6); clf; 
-% hold on;
-% [~,h]=contourf(X1,X2,(field),[-2e300,linspace(cmin,cmax,22)]);
-% set(h,'edgecolor','none');
-% axis square;
-% axis tight;
-% axis xy;
-% axis off;
-% colorbar;
-% colormap(redblue)
-% caxis([cmin,cmax]);
-% hold off;
-% 
-% 
-% 
-% %time 3
-% new_m= 2^9/2^3; %number of time steps
-% t_new = dt*new_m;
-% U_rec = reshape(ft(:,new_m,:),size(X1));
-% U_scat_cl = reshape(fscat_cl(:,new_m,:),size(X1));
-% U_scat = reshape(fscat(:,new_m,:),size(X1));
-% field = temp(X1,X2,t_new);
-% figure(7); clf; 
-% hold on;
-% [~,h]=contourf(X1,X2,field+U_scat,[-2e300,linspace(cmin,cmax,22)]);
-% set(h,'edgecolor','none');
-% h= patch(geo_k.ctr(:,1),geo_k.ctr(:,2),'k'); set(h, 'edgecolor', 'none')
-% axis square;
-% axis tight;
-% axis xy;
-% axis off;
-% colorbar;
-% colormap(redblue)
-% caxis([cmin,cmax]);
-% hold off;
-% 
-% figure(8); clf; 
-% hold on;
-% [~,h]=contourf(X1,X2,(field-U_rec+U_scat-U_scat_cl),[-2e300,linspace(cmin,cmax,22)]);
-% set(h,'edgecolor','none');
-% h= patch(geo_k.ctr(:,1),geo_k.ctr(:,2),'k'); set(h, 'edgecolor', 'none')
-% axis square;
-% axis tight;
-% axis xy;
-% axis off;
-% colorbar;
-% caxis([cmin,cmax]);
-% colormap(redblue)
-% viscircles(new_src_locs,rads, 'Color', 'k')
-% hold off;
-% 
-% figure(9); clf; 
-% hold on;
-% [~,h]=contourf(X1,X2,(field),[-2e300,linspace(cmin,cmax,22)]);
-% set(h,'edgecolor','none');
-% axis square;
-% axis tight;
-% axis xy;
-% axis off;
-% colorbar;
-% colormap(redblue)
-% caxis([cmin,cmax]);
-% hold off;
-% 
+
 % 
 % 
 
