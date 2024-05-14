@@ -1,4 +1,6 @@
 This code reproduces the figures 3, and 5-11 in the manuscript _Active exterior cloaking for the 2D Helmholtz equation with complex wavenumbers and application to thermal cloaking_ by Maxence Cassier, Trent Degiovanni, Sébastien Guenneau and Fernando Guevara Vasquez.
+* For the associated preprint: [arXiv:2203.02075](https://arxiv.org/abs/2203.02075)
+* This work was published in the Proceedings of Philosophical Society A: [DOI:10.1098/rsta.2022.0073](https://doi.org/10.1098/rsta.2022.0073)
 
 ## Instructions
 The script `FigNNN.m` reproduces figure NNN in the paper. All figures except for Figures 10 and 11 can be generated in a few seconds. Figure 10 takes less than 24 hours to generate and Figure 11 more than 24 hours. 
